@@ -1,12 +1,12 @@
 
 variable "aws_region" {
   description = "AWS region to launch servers."
-  default     = "us-west-2"
+  default     = "us-east-1"
 }
 
 # Example of a list variable
 variable "availability_zones" {
-  default = ["us-west-2a", "us-west-2b"]
+  default = ["us-east-1a", "us-east-1b"]
 }
 
 variable "cidr_block" {
@@ -15,7 +15,7 @@ variable "cidr_block" {
 
 variable "env" {
   description = "Targeted Deployment environment"
-  default     = "Development"
+  default     = "Dev"
 }
 
 variable "python_project_repository_branch" {
@@ -25,7 +25,7 @@ variable "python_project_repository_branch" {
 
 variable "artifacts_bucket_name" {
   description = "S3 Bucket for storing artifacts"
-  default     = "emeka18-cicd-artifacts-bucket"
+  default     = "shubham-cicd-artifacts-bucket"
 }
 
 variable "container_port" {
@@ -34,11 +34,11 @@ variable "container_port" {
 }
 
 variable "ACCOUNT_ID" {
-
+  default = 194865504633
 }
 
 variable "vpc_default_id" {
-  default = "vpc-d3dcdcab"
+  default = "vpc-105c3c6a"
 }
 
 variable "container_name" {

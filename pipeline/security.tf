@@ -1,5 +1,5 @@
-resource "aws_iam_role" "containerAppBuildProjectRole" {
-  name = "containerAppBuildProjectRole"
+resource "aws_iam_role" "containerAppBuildProjectRoles" {
+  name = "containerAppBuildProjectRoles"
 
   assume_role_policy = <<EOF
 {
@@ -17,8 +17,8 @@ resource "aws_iam_role" "containerAppBuildProjectRole" {
 EOF
 }
 
-resource "aws_iam_role_policy" "containerAppBuildProjectRolePolicy" {
-  role = aws_iam_role.containerAppBuildProjectRole.name
+resource "aws_iam_role_policy" "containerAppBuildProjectRolesPolicy" {
+  role = aws_iam_role.containerAppBuildProjectRoles.name
 
   policy = <<POLICY
 {
@@ -109,7 +109,7 @@ POLICY
 }
 
 resource "aws_iam_role" "apps_codepipeline_role" {
-  name = "apps-code-pipeline-role"
+  name = "apps-code-pipeline-roles"
 
   assume_role_policy = <<EOF
 {

@@ -1,9 +1,9 @@
 variable "env_name" {
   description = "Name of environment"
-  default     = "Development"
+  default     = "Dev"
 }
 
 variable "aws_region" {
   description = "AWS region to provision"
-  default     = "us-west-2"
+  default     = "us-east-1"
 }
